@@ -1,96 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Inter:wght@300;400;500&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
-
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --background: 20 10% 8%;
+    --foreground: 40 30% 92%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 20 10% 14%;
+    --card-foreground: 40 30% 92%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 20 10% 14%;
+    --popover-foreground: 40 30% 92%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 33 35% 57%;
+    --primary-foreground: 20 15% 7%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 20 8% 18%;
+    --secondary-foreground: 40 30% 92%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 25 6% 22%;
+    --muted-foreground: 30 8% 55%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 33 35% 57%;
+    --accent-foreground: 20 15% 7%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 60% 50%;
+    --destructive-foreground: 40 30% 92%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 33 30% 42% / 0.28;
+    --input: 33 30% 42% / 0.28;
+    --ring: 33 35% 57%;
 
-    --radius: 0.5rem;
+    --radius: 6px;
 
-    --sidebar-background: 0 0% 98%;
+    --deep: 20 12% 7%;
+    --bg2: 20 10% 12%;
+    --bronze: 33 35% 57%;
+    --bronze-hsl: 33 35% 57%;
 
-    --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
-  }
-
-  .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --font-display: 'Cormorant Garamond', Georgia, serif;
+    --font-body: 'Inter', -apple-system, sans-serif;
   }
 }
 
@@ -100,6 +52,97 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    background: hsl(var(--deep));
+    font-family: var(--font-body);
+    color: hsl(var(--foreground));
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+@layer components {
+  .font-display {
+    font-family: var(--font-display);
+  }
+
+  .text-bronze {
+    color: hsl(var(--bronze-hsl));
+  }
+
+  .bg-bronze {
+    background-color: hsl(var(--bronze-hsl));
+  }
+
+  .border-bronze {
+    border-color: hsl(var(--bronze-hsl));
+  }
+
+  .text-ivory {
+    color: hsl(var(--foreground));
+  }
+
+  .text-muted-custom {
+    color: hsl(var(--muted-foreground));
+  }
+
+  .bg-deep {
+    background: hsl(var(--deep));
+  }
+
+  .bg-surface {
+    background: hsl(var(--background));
+  }
+
+  .bg-surface-alt {
+    background: hsl(var(--bg2));
+  }
+
+  .bg-card-custom {
+    background: hsl(var(--card));
+  }
+
+  .border-subtle {
+    border-color: hsl(var(--bronze-hsl) / 0.28);
+  }
+
+  .border-subtle-hover:hover {
+    border-color: hsl(var(--bronze-hsl) / 0.55);
+  }
+
+  .hero-bg-pattern {
+    background:
+      radial-gradient(ellipse 80% 60% at 60% 40%, hsl(var(--bronze-hsl) / 0.07) 0%, transparent 70%),
+      repeating-linear-gradient(0deg, hsl(var(--bronze-hsl) / 0.03) 0px, hsl(var(--bronze-hsl) / 0.03) 1px, transparent 1px, transparent 40px),
+      repeating-linear-gradient(90deg, hsl(var(--bronze-hsl) / 0.03) 0px, hsl(var(--bronze-hsl) / 0.03) 1px, transparent 1px, transparent 40px);
+  }
+
+  .finp {
+    @apply w-full rounded-lg text-sm text-ivory outline-none transition-colors;
+    background: hsl(var(--card));
+    border: 1px solid hsl(var(--bronze-hsl) / 0.28);
+    padding: 12px 16px;
+    font-family: var(--font-body);
+  }
+  .finp:focus {
+    border-color: hsl(var(--bronze-hsl));
+  }
+  .finp::placeholder {
+    color: #5a5650;
+  }
+  select.finp {
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath fill='%23948e85' d='M6 8L0 0h12z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 14px center;
+    background-color: hsl(var(--card));
+  }
+  select.finp option {
+    background: hsl(var(--card));
+    color: hsl(var(--foreground));
+  }
+
+  .map-grid-pattern {
+    background-image:
+      repeating-linear-gradient(0deg, hsl(var(--bronze-hsl) / 0.05) 0px, hsl(var(--bronze-hsl) / 0.05) 1px, transparent 1px, transparent 32px),
+      repeating-linear-gradient(90deg, hsl(var(--bronze-hsl) / 0.05) 0px, hsl(var(--bronze-hsl) / 0.05) 1px, transparent 1px, transparent 32px);
   }
 }
