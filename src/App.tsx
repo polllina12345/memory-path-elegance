@@ -31,6 +31,8 @@ const App = () => (
             </Routes>
           </main>
           <Footer />
+          <WhatsAppButton />
+          <MobileCallButton />
         </div>
       </BrowserRouter>
     </TooltipProvider>
