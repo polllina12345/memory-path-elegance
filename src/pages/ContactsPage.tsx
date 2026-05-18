@@ -37,20 +37,40 @@ const ContactsPage = () => {
             ))}
           </div>
 
-          {/* Map placeholder */}
-          <div className="bg-card-custom border border-subtle rounded-lg h-[220px] relative overflow-hidden mb-6">
-            <div className="absolute inset-0 map-grid-pattern" />
-            <div className="absolute top-0 left-0 right-0 h-1 bg-bronze rounded-t-lg" />
-            <div className="absolute bottom-6 left-6">
-              <p className="font-display text-3xl text-ivory">Советская, 5</p>
-              <p className="text-xs text-muted-custom mt-1">Новосибирск · метро Площадь Ленина</p>
+          {/* Address card */}
+          <div className="bg-card-custom border border-subtle rounded-lg p-7 mb-6">
+            <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+              <div className="flex flex-col gap-4">
+                <div className="flex items-start gap-3">
+                  <MapPin size={20} className="text-bronze mt-0.5 shrink-0" />
+                  <div>
+                    <p className="font-display text-xl text-ivory">Новосибирск, Советская, 5</p>
+                    <p className="text-xs text-muted-custom mt-0.5">метро Площадь Ленина</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <Clock size={20} className="text-bronze mt-0.5 shrink-0" />
+                  <div>
+                    <p className="font-display text-xl text-ivory">Круглосуточно</p>
+                    <p className="text-xs text-muted-custom mt-0.5">Приём заявок и вызовы 24/7</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <Phone size={20} className="text-bronze mt-0.5 shrink-0" />
+                  <div>
+                    <p className="font-display text-xl text-ivory">+7 (800) 555-01-01</p>
+                    <p className="text-xs text-muted-custom mt-0.5">Бесплатный звонок по России</p>
+                  </div>
+                </div>
+              </div>
               <a
                 href="https://yandex.ru/maps/-/CDExYRD~"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-xs text-bronze mt-1.5 inline-block hover:underline"
+                className="inline-flex items-center justify-center gap-2 border border-bronze text-bronze text-[13px] px-6 py-2.5 rounded-sm hover:bg-[hsla(33,35%,57%,0.08)] transition-colors shrink-0"
               >
-                Открыть в Яндекс.Картах →
+                <MapPin size={16} />
+                Построить маршрут
               </a>
             </div>
           </div>
