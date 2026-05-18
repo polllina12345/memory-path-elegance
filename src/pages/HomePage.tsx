@@ -1,4 +1,6 @@
 import { Link } from "react-router-dom";
+import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/components/ui/accordion";
+import { Users, CalendarDays, Clock } from "lucide-react";
 import CtaBanner from "@/components/CtaBanner";
 
 const HomePage = () => {
@@ -153,6 +155,40 @@ const HomePage = () => {
         </div>
       </section>
 
+      {/* About Us */}
+      <section className="py-20 bg-surface-alt">
+        <div className="container mx-auto">
+          <p className="text-[10px] tracking-[0.14em] text-bronze mb-3">О &nbsp; Н А С</p>
+          <h2 className="font-display text-[clamp(32px,4vw,48px)] text-ivory mb-12">Люди, которым можно доверять</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-5 mb-12">
+            <div className="bg-card-custom border border-subtle rounded-lg p-7 text-center">
+              <Users size={28} className="text-bronze mx-auto mb-4" />
+              <p className="font-display text-3xl text-ivory mb-2">500+</p>
+              <p className="text-[13px] text-muted-custom">семей, которым мы помогли</p>
+            </div>
+            <div className="bg-card-custom border border-subtle rounded-lg p-7 text-center">
+              <CalendarDays size={28} className="text-bronze mx-auto mb-4" />
+              <p className="font-display text-3xl text-ivory mb-2">5 лет</p>
+              <p className="text-[13px] text-muted-custom">на рынке Новосибирска</p>
+            </div>
+            <div className="bg-card-custom border border-subtle rounded-lg p-7 text-center">
+              <Clock size={28} className="text-bronze mx-auto mb-4" />
+              <p className="font-display text-3xl text-ivory mb-2">24/7</p>
+              <p className="text-[13px] text-muted-custom">поддержка без выходных</p>
+            </div>
+          </div>
+          <div className="bg-card-custom border border-subtle rounded-lg p-7">
+            <p className="font-display text-xl text-ivory mb-3">Наша миссия</p>
+            <p className="text-[13px] text-muted-custom leading-relaxed max-w-3xl">
+              Мы верим, что прощание — это не конец, а возможность сохранить память о близком человеке достойно и красиво.
+              Наша команда объединяет опыт ритуальных традиций с заботой о каждой детали: от оформления документов
+              до создания персонального цифрового мемориала. Мы рядом в самый трудный момент, чтобы вы могли сосредоточиться
+              на главном — на памяти о человеке, которого любите.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* Audience */}
       <section className="py-20 bg-surface-alt">
         <div className="container mx-auto">
@@ -184,6 +220,64 @@ const HomePage = () => {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="py-20 bg-surface-alt">
+        <div className="container mx-auto">
+          <p className="text-[10px] tracking-[0.14em] text-bronze mb-3">В О П Р О С Ы</p>
+          <h2 className="font-display text-[clamp(32px,4vw,48px)] text-ivory mb-12">Часто задаваемые вопросы</h2>
+          <Accordion type="single" collapsible className="max-w-3xl">
+            <AccordionItem value="q1" className="border-b border-[hsla(33,35%,57%,0.28)]">
+              <AccordionTrigger className="text-ivory text-[15px] font-medium py-5 hover:no-underline hover:text-bronze transition-colors text-left">
+                Что делать в первые часы после смерти?
+              </AccordionTrigger>
+              <AccordionContent className="text-muted-custom text-[13px] leading-relaxed pb-5">
+                Вызовите скорую помощь для констатации смерти, после чего свяжитесь с нами по телефону +7 (800) 555-01-01.
+                Наш менеджер приедет в течение часа, поможет с транспортировкой, оформлением документов и выбором дальнейших действий.
+                Мы берём на себя всю организацию, чтобы вам не пришлось заниматься бюрократией в момент горя.
+              </AccordionContent>
+            </AccordionItem>
+            <AccordionItem value="q2" className="border-b border-[hsla(33,35%,57%,0.28)]">
+              <AccordionTrigger className="text-ivory text-[15px] font-medium py-5 hover:no-underline hover:text-bronze transition-colors text-left">
+                Сколько времени занимает организация похорон?
+              </AccordionTrigger>
+              <AccordionContent className="text-muted-custom text-[13px] leading-relaxed pb-5">
+                В среднем — от 1 до 3 дней с момента обращения. Всё зависит от выбранного формата, наличия необходимых документов
+                и пожеланий семьи. В срочных случаях базовая организация возможна в течение 24 часов.
+              </AccordionContent>
+            </AccordionItem>
+            <AccordionItem value="q3" className="border-b border-[hsla(33,35%,57%,0.28)]">
+              <AccordionTrigger className="text-ivory text-[15px] font-medium py-5 hover:no-underline hover:text-bronze transition-colors text-left">
+                Можно ли организовать похороны дистанционно?
+              </AccordionTrigger>
+              <AccordionContent className="text-muted-custom text-[13px] leading-relaxed pb-5">
+                Да. Мы организуем дистанционное сопровождение: онлайн-консультации, оформление документов через доверенность,
+                видеотрансляция церемонии и доставка ритуальных товаров. Вы можете быть уверены, что всё пройдёт достойно,
+                даже если вы находитесь в другом городе или стране.
+              </AccordionContent>
+            </AccordionItem>
+            <AccordionItem value="q4" className="border-b border-[hsla(33,35%,57%,0.28)]">
+              <AccordionTrigger className="text-ivory text-[15px] font-medium py-5 hover:no-underline hover:text-bronze transition-colors text-left">
+                Что входит в базовый пакет?
+              </AccordionTrigger>
+              <AccordionContent className="text-muted-custom text-[13px] leading-relaxed pb-5">
+                Базовый пакет (от 35 000 ₽) включает: транспорт ритуальный, оформление всех документов, место на кладбище,
+                базовые ритуальные товары (гроб, покрывало, венок) и организация церемонии прощания. Всё — под ключ,
+                без скрытых доплат.
+              </AccordionContent>
+            </AccordionItem>
+            <AccordionItem value="q5" className="border-b border-[hsla(33,35%,57%,0.28)]">
+              <AccordionTrigger className="text-ivory text-[15px] font-medium py-5 hover:no-underline hover:text-bronze transition-colors text-left">
+                Есть ли рассрочка?
+              </AccordionTrigger>
+              <AccordionContent className="text-muted-custom text-[13px] leading-relaxed pb-5">
+                Да, мы предлагаем рассрочку платежа на 3 и 6 месяцев без переплат. Также доступна подписка «Память»
+                (990 ₽/мес) для долгосрочного ухода за местом захоронения, поддержки сайта памяти и проведения памятных мероприятий.
+              </AccordionContent>
+            </AccordionItem>
+          </Accordion>
         </div>
       </section>
 
