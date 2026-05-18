@@ -1,4 +1,6 @@
 import { Link } from "react-router-dom";
+import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/components/ui/accordion";
+import { Users, CalendarDays, Clock } from "lucide-react";
 import CtaBanner from "@/components/CtaBanner";
 
 const HomePage = () => {
