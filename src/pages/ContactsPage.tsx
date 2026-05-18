@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { MapPin, Clock, Phone } from "lucide-react";
 import PageHero from "@/components/PageHero";
 
 const ContactsPage = () => {
