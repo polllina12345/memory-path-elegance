@@ -223,6 +223,64 @@ const HomePage = () => {
         </div>
       </section>
 
+      {/* FAQ */}
+      <section className="py-20 bg-surface-alt">
+        <div className="container mx-auto">
+          <p className="text-[10px] tracking-[0.14em] text-bronze mb-3">В О П Р О С Ы</p>
+          <h2 className="font-display text-[clamp(32px,4vw,48px)] text-ivory mb-12">Часто задаваемые вопросы</h2>
+          <Accordion type="single" collapsible className="max-w-3xl">
+            <AccordionItem value="q1" className="border-b border-[hsla(33,35%,57%,0.28)]">
+              <AccordionTrigger className="text-ivory text-[15px] font-medium py-5 hover:no-underline hover:text-bronze transition-colors text-left">
+                Что делать в первые часы после смерти?
+              </AccordionTrigger>
+              <AccordionContent className="text-muted-custom text-[13px] leading-relaxed pb-5">
+                Вызовите скорую помощь для констатации смерти, после чего свяжитесь с нами по телефону +7 (800) 555-01-01.
+                Наш менеджер приедет в течение часа, поможет с транспортировкой, оформлением документов и выбором дальнейших действий.
+                Мы берём на себя всю организацию, чтобы вам не пришлось заниматься бюрократией в момент горя.
+              </AccordionContent>
+            </AccordionItem>
+            <AccordionItem value="q2" className="border-b border-[hsla(33,35%,57%,0.28)]">
+              <AccordionTrigger className="text-ivory text-[15px] font-medium py-5 hover:no-underline hover:text-bronze transition-colors text-left">
+                Сколько времени занимает организация похорон?
+              </AccordionTrigger>
+              <AccordionContent className="text-muted-custom text-[13px] leading-relaxed pb-5">
+                В среднем — от 1 до 3 дней с момента обращения. Всё зависит от выбранного формата, наличия необходимых документов
+                и пожеланий семьи. В срочных случаях базовая организация возможна в течение 24 часов.
+              </AccordionContent>
+            </AccordionItem>
+            <AccordionItem value="q3" className="border-b border-[hsla(33,35%,57%,0.28)]">
+              <AccordionTrigger className="text-ivory text-[15px] font-medium py-5 hover:no-underline hover:text-bronze transition-colors text-left">
+                Можно ли организовать похороны дистанционно?
+              </AccordionTrigger>
+              <AccordionContent className="text-muted-custom text-[13px] leading-relaxed pb-5">
+                Да. Мы организуем дистанционное сопровождение: онлайн-консультации, оформление документов через доверенность,
+                видеотрансляция церемонии и доставка ритуальных товаров. Вы можете быть уверены, что всё пройдёт достойно,
+                даже если вы находитесь в другом городе или стране.
+              </AccordionContent>
+            </AccordionItem>
+            <AccordionItem value="q4" className="border-b border-[hsla(33,35%,57%,0.28)]">
+              <AccordionTrigger className="text-ivory text-[15px] font-medium py-5 hover:no-underline hover:text-bronze transition-colors text-left">
+                Что входит в базовый пакет?
+              </AccordionTrigger>
+              <AccordionContent className="text-muted-custom text-[13px] leading-relaxed pb-5">
+                Базовый пакет (от 35 000 ₽) включает: транспорт ритуальный, оформление всех документов, место на кладбище,
+                базовые ритуальные товары (гроб, покрывало, венок) и организация церемонии прощания. Всё — под ключ,
+                без скрытых доплат.
+              </AccordionContent>
+            </AccordionItem>
+            <AccordionItem value="q5" className="border-b border-[hsla(33,35%,57%,0.28)]">
+              <AccordionTrigger className="text-ivory text-[15px] font-medium py-5 hover:no-underline hover:text-bronze transition-colors text-left">
+                Есть ли рассрочка?
+              </AccordionTrigger>
+              <AccordionContent className="text-muted-custom text-[13px] leading-relaxed pb-5">
+                Да, мы предлагаем рассрочку платежа на 3 и 6 месяцев без переплат. Также доступна подписка «Память»
+                (990 ₽/мес) для долгосрочного ухода за местом захоронения, поддержки сайта памяти и проведения памятных мероприятий.
+              </AccordionContent>
+            </AccordionItem>
+          </Accordion>
+        </div>
+      </section>
+
       <CtaBanner title="Нужна помощь прямо сейчас?" subtitle="Выезд менеджера за 1 час. Звоним первыми — приедем и возьмём всё на себя." />
     </>
   );
