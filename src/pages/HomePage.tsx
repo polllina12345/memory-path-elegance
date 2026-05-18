@@ -155,6 +155,40 @@ const HomePage = () => {
         </div>
       </section>
 
+      {/* About Us */}
+      <section className="py-20 bg-surface-alt">
+        <div className="container mx-auto">
+          <p className="text-[10px] tracking-[0.14em] text-bronze mb-3">О &nbsp; Н А С</p>
+          <h2 className="font-display text-[clamp(32px,4vw,48px)] text-ivory mb-12">Люди, которым можно доверять</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-5 mb-12">
+            <div className="bg-card-custom border border-subtle rounded-lg p-7 text-center">
+              <Users size={28} className="text-bronze mx-auto mb-4" />
+              <p className="font-display text-3xl text-ivory mb-2">500+</p>
+              <p className="text-[13px] text-muted-custom">семей, которым мы помогли</p>
+            </div>
+            <div className="bg-card-custom border border-subtle rounded-lg p-7 text-center">
+              <CalendarDays size={28} className="text-bronze mx-auto mb-4" />
+              <p className="font-display text-3xl text-ivory mb-2">5 лет</p>
+              <p className="text-[13px] text-muted-custom">на рынке Новосибирска</p>
+            </div>
+            <div className="bg-card-custom border border-subtle rounded-lg p-7 text-center">
+              <Clock size={28} className="text-bronze mx-auto mb-4" />
+              <p className="font-display text-3xl text-ivory mb-2">24/7</p>
+              <p className="text-[13px] text-muted-custom">поддержка без выходных</p>
+            </div>
+          </div>
+          <div className="bg-card-custom border border-subtle rounded-lg p-7">
+            <p className="font-display text-xl text-ivory mb-3">Наша миссия</p>
+            <p className="text-[13px] text-muted-custom leading-relaxed max-w-3xl">
+              Мы верим, что прощание — это не конец, а возможность сохранить память о близком человеке достойно и красиво.
+              Наша команда объединяет опыт ритуальных традиций с заботой о каждой детали: от оформления документов
+              до создания персонального цифрового мемориала. Мы рядом в самый трудный момент, чтобы вы могли сосредоточиться
+              на главном — на памяти о человеке, которого любите.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* Audience */}
       <section className="py-20 bg-surface-alt">
         <div className="container mx-auto">
