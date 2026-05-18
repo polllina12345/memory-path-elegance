@@ -3,7 +3,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import WhatsAppButton from "@/components/WhatsAppButton";
+import SocialButtons from "@/components/SocialButtons";
 import MobileCallButton from "@/components/MobileCallButton";
 import HomePage from "@/pages/HomePage";
 import ServicesPage from "@/pages/ServicesPage";
@@ -31,7 +31,7 @@ const App = () => (
             </Routes>
           </main>
           <Footer />
-          <WhatsAppButton />
+          <SocialButtons />
           <MobileCallButton />
         </div>
       </BrowserRouter>
