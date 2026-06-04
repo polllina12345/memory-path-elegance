@@ -38,23 +38,27 @@ const HomePage = () => {
       {/* Hero */}
       <section className="relative min-h-[92vh] flex items-center overflow-hidden bg-surface">
         <div className="absolute inset-0 hero-bg-pattern pointer-events-none" />
+        <div className="hero-glow animate-glow-pulse" style={{ width: 520, height: 520, top: "-120px", right: "-160px" }} />
+        <div className="hero-glow animate-glow-pulse" style={{ width: 380, height: 380, bottom: "-140px", left: "-120px", animationDelay: "2s" }} />
         <div className="relative container mx-auto py-20">
-          <p className="text-[11px] tracking-[0.14em] text-bronze mb-6">Новосибирск · Советская, 5 · Звонки 24/7</p>
-          <h1 className="font-display text-[clamp(42px,5.5vw,76px)] text-ivory leading-[1.08] mb-6">
-            Мы не продаём смерть.<br />Мы помогаем сохранить<br />жизнь в памяти.
+          <p className="text-[11px] tracking-[0.14em] text-bronze mb-6 animate-fade-in" style={{ animationDelay: "0.05s" }}>
+            Новосибирск · Советская, 5 · Звонки 24/7
+          </p>
+          <h1 className="font-display text-[clamp(42px,5.5vw,76px)] text-ivory leading-[1.08] mb-6 animate-fade-up" style={{ animationDelay: "0.15s" }}>
+            Мы не продаём смерть.<br />Мы помогаем сохранить<br /><span className="text-shimmer">жизнь в памяти.</span>
           </h1>
-          <p className="text-base text-muted-custom leading-relaxed mb-10 max-w-xl">
+          <p className="text-base text-muted-custom leading-relaxed mb-10 max-w-xl animate-fade-up" style={{ animationDelay: "0.4s" }}>
             Сочетаем классический ритуал, event-менеджмент и психологическую поддержку — деликатно, профессионально, человечно.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 mb-4">
-            <Link to="/order" className="bg-bronze text-primary-foreground text-sm font-medium px-8 py-3.5 rounded-sm hover:opacity-85 transition-opacity text-center">
+          <div className="flex flex-col sm:flex-row gap-4 mb-4 animate-fade-up" style={{ animationDelay: "0.6s" }}>
+            <Link to="/order" className="bg-bronze text-primary-foreground text-sm font-medium px-8 py-3.5 rounded-sm hover:opacity-85 hover:-translate-y-0.5 transition-all duration-300 text-center shadow-[0_10px_30px_-12px_hsl(var(--bronze-hsl)/0.6)]">
               Оставить заявку
             </Link>
-            <a href="tel:+78005550101" className="inline-flex items-center justify-center border border-subtle text-ivory text-sm px-8 py-3.5 rounded-sm hover:border-bronze transition-colors">
+            <a href="tel:+78005550101" className="inline-flex items-center justify-center border border-subtle text-ivory text-sm px-8 py-3.5 rounded-sm hover:border-bronze hover:-translate-y-0.5 transition-all duration-300">
               +7 (800) 555-01-01
             </a>
           </div>
-          <p className="text-[11px] text-muted-custom tracking-wider">Бесплатный звонок · Выезд менеджера за 1 час</p>
+          <p className="text-[11px] text-muted-custom tracking-wider animate-fade-in" style={{ animationDelay: "0.8s" }}>Бесплатный звонок · Выезд менеджера за 1 час</p>
         </div>
       </section>
 
