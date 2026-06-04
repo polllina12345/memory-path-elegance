@@ -99,7 +99,7 @@ const HomePage = () => {
         <div className="container mx-auto">
           <p className="text-[10px] tracking-[0.14em] text-bronze mb-3">П А К Е Т Ы</p>
           <h2 className="font-display text-[clamp(32px,4vw,48px)] text-ivory mb-12">Выберите подходящий формат</h2>
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-5 items-start">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-5 items-stretch">
             {/* Basic */}
             <div className="bg-card-custom border border-subtle rounded-lg card-lift p-7 flex flex-col gap-3">
               <p className="font-display text-2xl text-ivory">Базовый</p>
