@@ -3,6 +3,11 @@ import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/
 import { Users, CalendarDays, Clock } from "lucide-react";
 import CtaBanner from "@/components/CtaBanner";
 import Reveal from "@/components/Reveal";
+import FirstHoursSection from "@/components/FirstHoursSection";
+import CostCalculator from "@/components/CostCalculator";
+import PackagesComparison from "@/components/PackagesComparison";
+import TeamSection from "@/components/TeamSection";
+import Epigraph from "@/components/Epigraph";
 
 const HomePage = () => {
   const services = [
