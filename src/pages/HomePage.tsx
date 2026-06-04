@@ -3,6 +3,11 @@ import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/
 import { Users, CalendarDays, Clock } from "lucide-react";
 import CtaBanner from "@/components/CtaBanner";
 import Reveal from "@/components/Reveal";
+import FirstHoursSection from "@/components/FirstHoursSection";
+import CostCalculator from "@/components/CostCalculator";
+import PackagesComparison from "@/components/PackagesComparison";
+import TeamSection from "@/components/TeamSection";
+import Epigraph from "@/components/Epigraph";
 
 const HomePage = () => {
   const services = [
@@ -62,6 +67,8 @@ const HomePage = () => {
         </div>
       </section>
 
+      <FirstHoursSection />
+
       {/* Services Grid */}
       <section className="py-20 bg-surface">
         <div className="container mx-auto">
@@ -84,6 +91,8 @@ const HomePage = () => {
           </div>
         </div>
       </section>
+
+      <CostCalculator />
 
       {/* Packages */}
       <section className="py-20 bg-surface-alt">
@@ -143,6 +152,13 @@ const HomePage = () => {
         </div>
       </section>
 
+      <PackagesComparison />
+
+      <Epigraph
+        text="Память — единственный рай, из которого нас не могут изгнать."
+        author="Жан Поль"
+      />
+
       {/* Why Us */}
       <section className="py-20 bg-surface">
         <div className="container mx-auto">
@@ -159,6 +175,8 @@ const HomePage = () => {
           </div>
         </div>
       </section>
+
+      <TeamSection />
 
       {/* About Us */}
       <section className="py-20 bg-surface-alt">
