@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/components/ui/accordion";
 import { Users, CalendarDays, Clock } from "lucide-react";
 import CtaBanner from "@/components/CtaBanner";
+import Reveal from "@/components/Reveal";
 
 const HomePage = () => {
   const services = [
@@ -37,23 +38,27 @@ const HomePage = () => {
       {/* Hero */}
       <section className="relative min-h-[92vh] flex items-center overflow-hidden bg-surface">
         <div className="absolute inset-0 hero-bg-pattern pointer-events-none" />
+        <div className="hero-glow animate-glow-pulse" style={{ width: 520, height: 520, top: "-120px", right: "-160px" }} />
+        <div className="hero-glow animate-glow-pulse" style={{ width: 380, height: 380, bottom: "-140px", left: "-120px", animationDelay: "2s" }} />
         <div className="relative container mx-auto py-20">
-          <p className="text-[11px] tracking-[0.14em] text-bronze mb-6">Новосибирск · Советская, 5 · Звонки 24/7</p>
-          <h1 className="font-display text-[clamp(42px,5.5vw,76px)] text-ivory leading-[1.08] mb-6">
-            Мы не продаём смерть.<br />Мы помогаем сохранить<br />жизнь в памяти.
+          <p className="text-[11px] tracking-[0.14em] text-bronze mb-6 animate-fade-in" style={{ animationDelay: "0.05s" }}>
+            Новосибирск · Советская, 5 · Звонки 24/7
+          </p>
+          <h1 className="font-display text-[clamp(42px,5.5vw,76px)] text-ivory leading-[1.08] mb-6 animate-fade-up" style={{ animationDelay: "0.15s" }}>
+            Мы не продаём смерть.<br />Мы помогаем сохранить<br /><span className="text-shimmer">жизнь в памяти.</span>
           </h1>
-          <p className="text-base text-muted-custom leading-relaxed mb-10 max-w-xl">
+          <p className="text-base text-muted-custom leading-relaxed mb-10 max-w-xl animate-fade-up" style={{ animationDelay: "0.4s" }}>
             Сочетаем классический ритуал, event-менеджмент и психологическую поддержку — деликатно, профессионально, человечно.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 mb-4">
-            <Link to="/order" className="bg-bronze text-primary-foreground text-sm font-medium px-8 py-3.5 rounded-sm hover:opacity-85 transition-opacity text-center">
+          <div className="flex flex-col sm:flex-row gap-4 mb-4 animate-fade-up" style={{ animationDelay: "0.6s" }}>
+            <Link to="/order" className="bg-bronze text-primary-foreground text-sm font-medium px-8 py-3.5 rounded-sm hover:opacity-85 hover:-translate-y-0.5 transition-all duration-300 text-center shadow-[0_10px_30px_-12px_hsl(var(--bronze-hsl)/0.6)]">
               Оставить заявку
             </Link>
-            <a href="tel:+78005550101" className="inline-flex items-center justify-center border border-subtle text-ivory text-sm px-8 py-3.5 rounded-sm hover:border-bronze transition-colors">
+            <a href="tel:+78005550101" className="inline-flex items-center justify-center border border-subtle text-ivory text-sm px-8 py-3.5 rounded-sm hover:border-bronze hover:-translate-y-0.5 transition-all duration-300">
               +7 (800) 555-01-01
             </a>
           </div>
-          <p className="text-[11px] text-muted-custom tracking-wider">Бесплатный звонок · Выезд менеджера за 1 час</p>
+          <p className="text-[11px] text-muted-custom tracking-wider animate-fade-in" style={{ animationDelay: "0.8s" }}>Бесплатный звонок · Выезд менеджера за 1 час</p>
         </div>
       </section>
 
@@ -64,7 +69,7 @@ const HomePage = () => {
           <h2 className="font-display text-[clamp(32px,4vw,48px)] text-ivory mb-12">Комплексный подход к прощанию</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             {services.map((s) => (
-              <Link to="/services" key={s.title} className="bg-card-custom border border-subtle rounded-lg p-6 pl-7 relative transition-colors border-subtle-hover cursor-pointer group">
+              <Link to="/services" key={s.title} className="bg-card-custom border border-subtle rounded-lg card-lift p-6 pl-7 relative transition-colors border-subtle-hover cursor-pointer group">
                 <div className="absolute left-0 top-0 bottom-0 w-[3px] bg-bronze rounded-l" />
                 <p className="font-display text-xl text-ivory mb-2">{s.title}</p>
                 <p className="text-xs text-muted-custom mb-4 leading-relaxed">{s.sub}</p>
@@ -87,7 +92,7 @@ const HomePage = () => {
           <h2 className="font-display text-[clamp(32px,4vw,48px)] text-ivory mb-12">Выберите подходящий формат</h2>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-5 items-start">
             {/* Basic */}
-            <div className="bg-card-custom border border-subtle rounded-lg p-7 flex flex-col gap-3">
+            <div className="bg-card-custom border border-subtle rounded-lg card-lift p-7 flex flex-col gap-3">
               <p className="font-display text-2xl text-ivory">Базовый</p>
               <p className="text-xl text-bronze font-medium">от 35 000 ₽</p>
               <p className="text-xs text-muted-custom">Традиционные похороны</p>
@@ -120,7 +125,7 @@ const HomePage = () => {
               </Link>
             </div>
             {/* Subscription */}
-            <div className="bg-card-custom border border-subtle rounded-lg p-7 flex flex-col gap-3">
+            <div className="bg-card-custom border border-subtle rounded-lg card-lift p-7 flex flex-col gap-3">
               <p className="font-display text-2xl text-ivory">Подписка «Память»</p>
               <p className="text-xl text-bronze font-medium">990 ₽/мес</p>
               <p className="text-xs text-muted-custom">Долгосрочная забота</p>
@@ -145,7 +150,7 @@ const HomePage = () => {
           <h2 className="font-display text-[clamp(32px,4vw,48px)] text-ivory mb-12">Агентство нового поколения</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
             {whyUs.map((w) => (
-              <div key={w.title} className="bg-card-custom border border-subtle rounded-lg p-7">
+              <div key={w.title} className="bg-card-custom border border-subtle rounded-lg card-lift p-7">
                 <span className="block text-2xl text-bronze mb-4">{w.icon}</span>
                 <p className="font-display text-xl text-ivory mb-2.5">{w.title}</p>
                 <p className="text-[13px] text-muted-custom leading-relaxed">{w.desc}</p>
@@ -161,23 +166,23 @@ const HomePage = () => {
           <p className="text-[10px] tracking-[0.14em] text-bronze mb-3">О &nbsp; Н А С</p>
           <h2 className="font-display text-[clamp(32px,4vw,48px)] text-ivory mb-12">Люди, которым можно доверять</h2>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-5 mb-12">
-            <div className="bg-card-custom border border-subtle rounded-lg p-7 text-center">
+            <div className="bg-card-custom border border-subtle rounded-lg card-lift p-7 text-center">
               <Users size={28} className="text-bronze mx-auto mb-4" />
               <p className="font-display text-3xl text-ivory mb-2">500+</p>
               <p className="text-[13px] text-muted-custom">семей, которым мы помогли</p>
             </div>
-            <div className="bg-card-custom border border-subtle rounded-lg p-7 text-center">
+            <div className="bg-card-custom border border-subtle rounded-lg card-lift p-7 text-center">
               <CalendarDays size={28} className="text-bronze mx-auto mb-4" />
               <p className="font-display text-3xl text-ivory mb-2">5 лет</p>
               <p className="text-[13px] text-muted-custom">на рынке Новосибирска</p>
             </div>
-            <div className="bg-card-custom border border-subtle rounded-lg p-7 text-center">
+            <div className="bg-card-custom border border-subtle rounded-lg card-lift p-7 text-center">
               <Clock size={28} className="text-bronze mx-auto mb-4" />
               <p className="font-display text-3xl text-ivory mb-2">24/7</p>
               <p className="text-[13px] text-muted-custom">поддержка без выходных</p>
             </div>
           </div>
-          <div className="bg-card-custom border border-subtle rounded-lg p-7">
+          <div className="bg-card-custom border border-subtle rounded-lg card-lift p-7">
             <p className="font-display text-xl text-ivory mb-3">Наша миссия</p>
             <p className="text-[13px] text-muted-custom leading-relaxed max-w-3xl">
               Мы верим, что прощание — это не конец, а возможность сохранить память о близком человеке достойно и красиво.
@@ -196,7 +201,7 @@ const HomePage = () => {
           <h2 className="font-display text-[clamp(32px,4vw,48px)] text-ivory mb-12">Мы понимаем, кто к нам приходит</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
             {audience.map((a) => (
-              <div key={a.title} className="bg-card-custom border border-subtle rounded-lg p-6">
+              <div key={a.title} className="bg-card-custom border border-subtle rounded-lg card-lift p-6">
                 <span className="inline-block text-[10px] text-bronze border border-[hsla(33,35%,57%,0.3)] px-2.5 py-0.5 rounded-xl mb-3 tracking-wider">{a.tag}</span>
                 <p className="font-display text-xl text-ivory mb-2.5">{a.title}</p>
                 <p className="text-[13px] text-muted-custom leading-relaxed">{a.desc}</p>
@@ -213,7 +218,7 @@ const HomePage = () => {
           <h2 className="font-display text-[clamp(32px,4vw,48px)] text-ivory mb-12">Нам доверяют</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
             {reviews.map((r, i) => (
-              <div key={i} className="bg-card-custom border border-subtle rounded-lg p-6 pl-7 relative">
+              <div key={i} className="bg-card-custom border border-subtle rounded-lg card-lift p-6 pl-7 relative">
                 <div className="absolute left-0 top-0 bottom-0 w-[3px] bg-bronze rounded-l" />
                 <p className="font-display text-base text-ivory leading-relaxed mb-3">{r.text}</p>
                 <p className="text-[11px] text-muted-custom">{r.author}</p>
