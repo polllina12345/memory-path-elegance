@@ -45,7 +45,7 @@ const FirstHoursSection = () => {
                 const Icon = s.icon;
                 return (
                   <li key={s.title} className="bg-card-custom border border-subtle rounded-lg card-lift p-5 flex gap-5 items-start">
-                    <div className="flex-shrink-0 w-11 h-11 rounded-full border border-bronze flex items-center justify-center text-bronze font-display text-lg">
+                    <div className="flex-shrink-0 w-11 h-11 rounded-full border border-bronze flex items-center justify-center text-bronze text-base font-medium tabular-nums leading-none">
                       {i + 1}
                     </div>
                     <div className="flex-1">
