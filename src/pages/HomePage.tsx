@@ -6,7 +6,7 @@ import Reveal from "@/components/Reveal";
 import FirstHoursSection from "@/components/FirstHoursSection";
 import CostCalculator from "@/components/CostCalculator";
 import PackagesComparison from "@/components/PackagesComparison";
-import TeamSection from "@/components/TeamSection";
+
 import Epigraph from "@/components/Epigraph";
 
 const HomePage = () => {
@@ -175,8 +175,6 @@ const HomePage = () => {
           </div>
         </div>
       </section>
-
-      <TeamSection />
 
       {/* About Us */}
       <section className="py-20 bg-surface-alt">
