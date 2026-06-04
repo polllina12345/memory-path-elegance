@@ -145,4 +145,52 @@
       repeating-linear-gradient(0deg, hsl(var(--bronze-hsl) / 0.05) 0px, hsl(var(--bronze-hsl) / 0.05) 1px, transparent 1px, transparent 32px),
       repeating-linear-gradient(90deg, hsl(var(--bronze-hsl) / 0.05) 0px, hsl(var(--bronze-hsl) / 0.05) 1px, transparent 1px, transparent 32px);
   }
+
+  /* Scroll reveal */
+  .reveal {
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity 0.9s cubic-bezier(0.22, 1, 0.36, 1), transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+    will-change: opacity, transform;
+  }
+  .reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* Hover lift for cards */
+  .card-lift {
+    transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1),
+      border-color 0.3s ease,
+      box-shadow 0.45s ease;
+  }
+  .card-lift:hover {
+    transform: translateY(-4px);
+    border-color: hsl(var(--bronze-hsl) / 0.55);
+    box-shadow: 0 18px 40px -22px hsl(var(--bronze-hsl) / 0.45);
+  }
+
+  /* Bronze shimmer text */
+  .text-shimmer {
+    background: linear-gradient(
+      90deg,
+      hsl(var(--bronze-hsl)) 0%,
+      hsl(40 60% 78%) 50%,
+      hsl(var(--bronze-hsl)) 100%
+    );
+    background-size: 200% 100%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: shimmer 6s linear infinite;
+  }
+
+  /* Animated bronze accent glow under hero */
+  .hero-glow {
+    position: absolute;
+    border-radius: 9999px;
+    filter: blur(80px);
+    background: radial-gradient(circle, hsl(var(--bronze-hsl) / 0.55) 0%, transparent 70%);
+    pointer-events: none;
+  }
 }
