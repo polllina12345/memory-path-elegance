@@ -8,6 +8,7 @@ import CostCalculator from "@/components/CostCalculator";
 import PackagesComparison from "@/components/PackagesComparison";
 
 import Epigraph from "@/components/Epigraph";
+import heroBg from "@/assets/hero-bg.jpg";
 
 const HomePage = () => {
   const services = [
@@ -42,7 +43,17 @@ const HomePage = () => {
     <>
       {/* Hero */}
       <section className="relative min-h-[92vh] flex items-center overflow-hidden bg-surface">
-        <div className="absolute inset-0 hero-bg-pattern pointer-events-none" />
+        <img
+          src={heroBg}
+          alt=""
+          aria-hidden="true"
+          width={1920}
+          height={1080}
+          className="absolute inset-0 w-full h-full object-cover object-center opacity-70 scale-105 animate-fade-in"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-surface via-surface/85 to-surface/20 pointer-events-none" />
+        <div className="absolute inset-0 bg-gradient-to-t from-surface via-transparent to-surface/40 pointer-events-none" />
+        <div className="absolute inset-0 hero-bg-pattern pointer-events-none opacity-60" />
         <div className="hero-glow animate-glow-pulse" style={{ width: 520, height: 520, top: "-120px", right: "-160px" }} />
         <div className="hero-glow animate-glow-pulse" style={{ width: 380, height: 380, bottom: "-140px", left: "-120px", animationDelay: "2s" }} />
         <div className="relative container mx-auto py-20">
