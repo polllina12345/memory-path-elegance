@@ -2,6 +2,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import Header from "@/components/Header";
+import ScrollToTop from "@/components/ScrollToTop";
 import Footer from "@/components/Footer";
 import SocialButtons from "@/components/SocialButtons";
 import MobileCallButton from "@/components/MobileCallButton";
@@ -18,6 +19,7 @@ const App = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
       <BrowserRouter basename={import.meta.env.BASE_URL}>
+        <ScrollToTop />
         <div className="min-h-screen flex flex-col">
           <Header />
           <main className="flex-1 pb-14 md:pb-0">
