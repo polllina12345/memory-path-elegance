@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import PageHero from "@/components/PageHero";
 import CtaBanner from "@/components/CtaBanner";
+import Seo from "@/components/Seo";
 import { CATALOG } from "@/data/catalog";
 import { ChevronDown, ChevronUp } from "lucide-react";
 
