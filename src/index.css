@@ -193,4 +193,44 @@
     background: radial-gradient(circle, hsl(var(--bronze-hsl) / 0.55) 0%, transparent 70%);
     pointer-events: none;
   }
+
+  /* Hero: slow "breathing" zoom on background image */
+  @keyframes hero-breathe {
+    0%, 100% { transform: scale(1.05); }
+    50%      { transform: scale(1.11); }
+  }
+  .hero-breathe {
+    animation: hero-breathe 24s ease-in-out infinite;
+    will-change: transform;
+  }
+
+  /* Hero: very slow drift for bronze glows */
+  @keyframes hero-drift-a {
+    0%, 100% { transform: translate(0, 0); }
+    50%      { transform: translate(-24px, 18px); }
+  }
+  @keyframes hero-drift-b {
+    0%, 100% { transform: translate(0, 0); }
+    50%      { transform: translate(20px, -16px); }
+  }
+  .hero-drift-a { animation: hero-drift-a 18s ease-in-out infinite; }
+  .hero-drift-b { animation: hero-drift-b 22s ease-in-out infinite; }
+
+  /* Respect users who prefer reduced motion */
+  @media (prefers-reduced-motion: reduce) {
+    .hero-breathe,
+    .hero-drift-a,
+    .hero-drift-b,
+    .animate-glow-pulse,
+    .animate-fade-in,
+    .animate-fade-up,
+    .text-shimmer {
+      animation: none !important;
+    }
+    .reveal {
+      opacity: 1 !important;
+      transform: none !important;
+      transition: none !important;
+    }
+  }
 }
