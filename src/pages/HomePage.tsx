@@ -8,6 +8,7 @@ import CostCalculator from "@/components/CostCalculator";
 import PackagesComparison from "@/components/PackagesComparison";
 
 import Epigraph from "@/components/Epigraph";
+import Seo from "@/components/Seo";
 import heroBg from "@/assets/hero-bg.jpg";
 
 const HomePage = () => {
@@ -41,6 +42,11 @@ const HomePage = () => {
 
   return (
     <>
+      <Seo
+        title="Последний Путь — ритуальное агентство в Новосибирске · 24/7"
+        description="Организация похорон под ключ: цифровой мемориал, эко-линия, психолог сопровождения. Открытые цены, выезд за 1 час, поддержка 24/7."
+        path="/"
+      />
       {/* Hero */}
       <section className="relative min-h-[92vh] flex items-center overflow-hidden bg-surface">
         <img

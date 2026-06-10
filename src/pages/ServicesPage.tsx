@@ -1,15 +1,22 @@
 import { Link } from "react-router-dom";
 import PageHero from "@/components/PageHero";
 import CtaBanner from "@/components/CtaBanner";
+import Seo from "@/components/Seo";
 import { SERVICES } from "@/data/services";
 
 const ServicesPage = () => (
   <>
+    <Seo
+      title="Услуги · Последний Путь — похороны, эко-линия, цифровой мемориал"
+      description="Полный спектр ритуальных услуг в Новосибирске: традиционные похороны, эко-линия, цифровой мемориал, VIP-персонализация, психологическая поддержка."
+      path="/services"
+    />
     <PageHero
       label="У С Л У Г И"
       title="Полный спектр<br/>ритуальных услуг"
       subtitle="Традиционные похороны, эко-линия, цифровой мемориал, VIP-персонализация и психологическая поддержка."
     />
+
     <section className="py-20 bg-surface">
       <div className="container mx-auto flex flex-col gap-4">
         {SERVICES.map((s) => (

@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { MapPin, Clock, Phone } from "lucide-react";
 import PageHero from "@/components/PageHero";
+import Seo from "@/components/Seo";
 
 const ContactsPage = () => {
   const contacts = [
@@ -14,6 +15,11 @@ const ContactsPage = () => {
 
   return (
     <>
+      <Seo
+        title="Контакты · Последний Путь — Новосибирск, Советская 5, 24/7"
+        description="Телефон, WhatsApp, Telegram, e-mail и адрес офиса в Новосибирске. Звонки круглосуточно, выезд менеджера в течение 1 часа."
+        path="/contacts"
+      />
       <PageHero
         label="К О Н Т А К Т Ы"
         title="Мы рядом<br/>круглосуточно"

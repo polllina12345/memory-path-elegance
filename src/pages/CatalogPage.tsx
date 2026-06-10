@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import PageHero from "@/components/PageHero";
 import CtaBanner from "@/components/CtaBanner";
+import Seo from "@/components/Seo";
 import { CATALOG } from "@/data/catalog";
 import { ChevronDown, ChevronUp } from "lucide-react";
 
@@ -14,6 +15,11 @@ const CatalogPage = () => {
 
   return (
     <>
+      <Seo
+        title="Каталог · Гробы, венки, памятники — Последний Путь, Новосибирск"
+        description="Ассортимент ритуальных товаров с открытыми ценами: гробы, венки, кресты, памятники. Доставка по Новосибирску включена, оплата после услуги."
+        path="/catalog"
+      />
       <PageHero
         label="К А Т А Л О Г"
         title="Ассортимент<br/>и цены"
