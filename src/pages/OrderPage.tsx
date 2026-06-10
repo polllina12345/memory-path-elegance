@@ -1,5 +1,6 @@
 import { useState } from "react";
 import PageHero from "@/components/PageHero";
+import Seo from "@/components/Seo";
 
 const OrderPage = () => {
   const [submitted, setSubmitted] = useState(false);
