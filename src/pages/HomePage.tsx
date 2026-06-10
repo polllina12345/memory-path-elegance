@@ -8,6 +8,7 @@ import CostCalculator from "@/components/CostCalculator";
 import PackagesComparison from "@/components/PackagesComparison";
 
 import Epigraph from "@/components/Epigraph";
+import Seo from "@/components/Seo";
 import heroBg from "@/assets/hero-bg.jpg";
 
 const HomePage = () => {
