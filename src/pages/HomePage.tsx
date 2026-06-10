@@ -49,13 +49,13 @@ const HomePage = () => {
           aria-hidden="true"
           width={1920}
           height={1080}
-          className="absolute inset-0 w-full h-full object-cover object-center opacity-70 scale-105 animate-fade-in"
+          className="absolute inset-0 w-full h-full object-cover object-center opacity-70 hero-breathe animate-fade-in"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-surface via-surface/85 to-surface/20 pointer-events-none" />
         <div className="absolute inset-0 bg-gradient-to-t from-surface via-transparent to-surface/40 pointer-events-none" />
         <div className="absolute inset-0 hero-bg-pattern pointer-events-none opacity-60" />
-        <div className="hero-glow animate-glow-pulse" style={{ width: 520, height: 520, top: "-120px", right: "-160px" }} />
-        <div className="hero-glow animate-glow-pulse" style={{ width: 380, height: 380, bottom: "-140px", left: "-120px", animationDelay: "2s" }} />
+        <div className="hero-glow hero-drift-a animate-glow-pulse" style={{ width: 520, height: 520, top: "-120px", right: "-160px" }} />
+        <div className="hero-glow hero-drift-b animate-glow-pulse" style={{ width: 380, height: 380, bottom: "-140px", left: "-120px", animationDelay: "2s" }} />
         <div className="relative container mx-auto py-20">
           <p className="text-[11px] tracking-[0.14em] text-bronze mb-6 animate-fade-in" style={{ animationDelay: "0.05s" }}>
             Новосибирск · Советская, 5 · Звонки 24/7
