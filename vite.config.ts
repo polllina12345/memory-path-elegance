@@ -5,7 +5,8 @@ import { componentTagger } from "lovable-tagger";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
-  base: "/memory-path-elegance/",
+  // GitHub Pages serves the site from a subfolder; Lovable hosting serves it from the root.
+  base: process.env.GITHUB_PAGES === "true" ? "/memory-path-elegance/" : "/",
   server: {
     host: "::",
     port: 8080,
